@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  
+<h1>
+    Weather App
+    <br>
+    <input type="text" [(ngModel)]="cityName">
+    <button (click)="searchCity()">Search City</button>
+    <button  (click)="GetData()">Get Data</button>
+
+    <a class="btn" (click)="GetData()" >Get Data By Anchor</a>
+      <input type="button" (click)="GetData()" value="Get Data By Input Button" >
+  
+  </h1>
+  <h2>Humidity:{{cityHumid}}<h2>
+
+<p>Customers:</p>
+  <ul>
+    <li *ngFor="let customer of customers">
+      Id:{{ customer.Id }}, TItle={{ customer.Title }}      
+    </li>
+  </ul>
+
+  <h1>Angular Router</h1>
+  <nav>
+    <a routerLink="/herolist" routerLinkActive="active">Hero List</a>
+    <a routerLink="/hero" routerLinkActive="active">Hero</a>
+  </nav>
+  <router-outlet></router-outlet>
+
+
